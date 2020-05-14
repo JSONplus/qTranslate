@@ -1,0 +1,15 @@
+{
+    "name": "jsonplus/qtranslate",
+    "description": "an JSONplus extension to provide i18n support to human-readable strings like markdown based upon the qTranslate syntax",
+    "license": "apache-2.0",
+    "authors": [
+        {
+            "name": "Sent G. Wierda",
+            "email": "sentwierda@gmail.com"
+        }
+    ],
+    "require": {
+	"jsonplus/jsonplus": "^1.0"
+    },
+    "autoload": {"files": ["JSONplus_qTranslate.php"]}
+}
