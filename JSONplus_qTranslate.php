@@ -1,6 +1,6 @@
 <?php
 namespace JSONplus;
-require_once('JSONplus.php');
+if(!class_exists('JSONplus') && !defined('COMPOSER')){ require_once('JSONplus.php'); }
 if(!defined("LANGUAGE")){define("LANGUAGE", "en");}
 
 class qTranslate extends \JSONplus {
