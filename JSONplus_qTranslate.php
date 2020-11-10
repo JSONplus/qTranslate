@@ -20,7 +20,7 @@ class qTranslate extends \JSONplus {
 			elseif(preg_match('#^([a-zA-Z_]{1,6}|[\#])([!\*\?\~]{0,})\]#i', $s, $buffer)){
 			if($buffer[1] == '#'){ $ar[$i]['$ref'] = substr($s, strlen($buffer[0])); }
 				else{ $ar[$i][$buffer[1]] = substr($s, strlen($buffer[0])); }
-				if(isset($buffer[2])){ for($i=strlen($buffer[2]);$i>0;$i--){ switch($buffer[2]{$i-1}){
+				if(isset($buffer[2])){ for($i=strlen($buffer[2]);$i>0;$i--){ switch(substr($buffer[2], $i-1, 1)){
 					case '*': $ar[$i][':default'] = $buffer[1]; break;
 					case '!': $ar[$i][':force'] = $buffer[1]; break;
 					case '?': $ar[$i][':concept'][] = $buffer[1]; break;
